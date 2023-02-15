@@ -32,6 +32,12 @@ public class LaunchTestLeafAppEditLead {
 		driver1.findElement(By.name("submitButton")).click();
 		String pageTitle = driver1.getTitle();
 		System.out.println(pageTitle);
+		driver1.findElement(By.linkText("Edit")).click();
+		driver1.findElement(By.id("updateLeadForm_description")).clear();
+		driver1.findElement(By.id("updateLeadForm_importantNote")).sendKeys("Complete editing");
+		driver1.findElement(By.name("submitButton")).click();
+		String pageTitleInEdit = driver1.getTitle();
+		System.out.println(pageTitleInEdit);
 	}
 
 
